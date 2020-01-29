@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href = "styles.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <h1>Save It 1.0.0</h1>
+    <form>
+      Enter text here:<br>
+      <input type = "text" name = "firstname" id="text"><br>
+      Enter code word:<br>
+      <input type = "text" name = "firstname" id="code">
+      <button type = "button" onclick="addData()">Save It!</button>
+    </form>
+
+    <form>
+      Enter code here:<br>
+      <input type = "text" name = "firstname" id="retrieve">
+      <button type = "button" onclick="getData()">Get It!</button>
+    </form>
+    <p id="given"></p>
+
+
+
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAmnH0I-kXnQG-f_ACsHuqgybu1OKJCEQE",
+        authDomain: "to-do-list-e2a00.firebaseapp.com",
+        databaseURL: "https://to-do-list-e2a00.firebaseio.com",
+        projectId: "to-do-list-e2a00",
+        storageBucket: "to-do-list-e2a00.appspot.com",
+        messagingSenderId: "667821486721",
+        appId: "1:667821486721:web:6df53f936a947b1607d380",
+        measurementId: "G-90WD4GPPH0"
+      };
+
+      // Initialize Cloud Firestore through Firebase
+      firebase.initializeApp({
+        apiKey: "AIzaSyAmnH0I-kXnQG-f_ACsHuqgybu1OKJCEQE",
+        authDomain: "to-do-list-e2a00.firebaseapp.com",
+        projectId: "to-do-list-e2a00"
+      });
+      var db = firebase.firestore();
+      firebase.analytics();
+
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
